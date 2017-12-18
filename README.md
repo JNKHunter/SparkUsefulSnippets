@@ -15,3 +15,6 @@ parsed.createOrReplaceTempView("linkage")
 
 #### Run a sql query on a table view
 spark.sql("SELECT is_match, COUNT(*) cnt FROM linkage GROUP BY is_match ORDER BY cnt DESC").show
+
+#### Show count, min, max, mean, stddev of a dataframe
+parsed.describe().show()
