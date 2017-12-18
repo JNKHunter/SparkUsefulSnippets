@@ -9,3 +9,6 @@ parsed.cache
 
 #### Read a file containing 1 or more json objects per line
 val df = spark.read.json("file_or_directory")
+
+#### Create a table view called "linkage" to run sql queries against
+parsed.createOrReplaceTempView("linkage")
