@@ -12,3 +12,6 @@ val df = spark.read.json("file_or_directory")
 
 #### Create a table view called "linkage" to run sql queries against
 parsed.createOrReplaceTempView("linkage")
+
+#### Run a sql query on a table view
+spark.sql("SELECT is_match, COUNT(*) cnt FROM linkage GROUP BY is_match ORDER BY cnt DESC").show
